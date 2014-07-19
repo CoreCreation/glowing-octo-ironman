@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Regular expression rm
+
+regex=$1
+
+if [ -z  $regex ];
+then
+echo "Please provide an expression"
+exit 1
+fi
+
+ls -a | egrep $regex | xargs rm
+
+exit
